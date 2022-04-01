@@ -1,5 +1,3 @@
-document.addEventListener('keydown', e => console.log(e.code))
-
 let canvas = document.querySelector('#canvas');
 let context = canvas.getContext('2d');
 
@@ -88,16 +86,16 @@ function loop() {
   }
 
 document.addEventListener('keydown', e => {
-    if (e.code === 'ArrowLeft' || e.code === 'keyA' && snake.dx === 0) {
+    if (e.code === 'ArrowLeft' || e.code === 'KeyA' && snake.dx === 0) {
       snake.dx = -grid;
       snake.dy = 0;
-    } else if (e.code === 'ArrowUp' || e.code === 'keyW' && snake.dy === 0) {
+    } else if (e.code === 'ArrowUp' || e.code === 'KeyW' && snake.dy === 0) {
       snake.dy = -grid;
       snake.dx = 0;
-    } else if (e.code === 'ArrowRight' || e.code === 'keyD' && snake.dx === 0) {
+    } else if (e.code === 'ArrowRight' || e.code === 'KeyD' && snake.dx === 0) {
       snake.dx = grid;
       snake.dy = 0;
-    } else if (e.code === 'ArrowDown' || e.code === 'keyS' && snake.dy === 0) {
+    } else if (e.code === 'ArrowDown' || e.code === 'KeyS' && snake.dy === 0) {
       snake.dy = grid;
       snake.dx = 0;
     }
